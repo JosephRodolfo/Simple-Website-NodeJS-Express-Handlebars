@@ -6,12 +6,14 @@ const messageOne = document.querySelector("#message-1");
 const messageTwo = document.querySelector("#message-2");
 
 
+
+
 weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
   let searchValue = searchElement.value;
 
 
-  fetch(`http://localhost:3000/weather?address=${searchValue}`).then(
+  fetch(`/weather?address=${searchValue}`).then(
     (response) => {
       messageOne.textContent = "Loading ... ";
       messageTwo.textContent = "";
