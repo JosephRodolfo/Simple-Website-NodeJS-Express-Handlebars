@@ -1,9 +1,12 @@
 const request = require("request");
-const config = require('../../config/config')
+//const config = require('../../config/config')
+
+let API_KEY_WEATHER = process.env.API_KEY_WEATHER;
+
 
 const forecast = (lat, long, callback)=> {
 
-    const url = `http://api.weatherstack.com/current?access_key=${config.API_KEY_WEATHER}&query=${lat},${long}&units=f`;
+    const url = `http://api.weatherstack.com/current?access_key=${API_KEY_WEATHER}&query=${lat},${long}&units=f`;
     console.log(url);
     
     
